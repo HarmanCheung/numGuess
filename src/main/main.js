@@ -40,6 +40,5 @@ class workshop{
     }
 
 }
-workshop = new workshop(3,4,5,6);
-workshop.getResult()
+
 
