@@ -1,0 +1,26 @@
+{
+  "name": "zhm",
+  "version": "1.0.0",
+  "description": "numguess",
+  "main": "index.js",
+  "dependencies": {
+    "sinon": "^2.3.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarmanCheung/numGuess.git"
+  },
+  "keywords": [
+    "numGuess"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarmanCheung/numGuess/issues"
+  },
+  "homepage": "https://github.com/HarmanCheung/numGuess#readme"
+}

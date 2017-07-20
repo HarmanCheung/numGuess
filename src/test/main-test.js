@@ -1,18 +1,19 @@
 /**
  * Created by zhm on 17-7-18.
  */
-describe('workshop', () => {
-    it('user give 4 number,make a Array property to workshop', () => {
-        
-        var number = [3,5,7,9];
-        workshop1 = new workshop(3,5,7,9);
-        expect(workshop1.number).toEqual(number);
+const main = require('../main/main');
+const sinon = require('sinon');
+wor = new main.workshop();
+
+function test() {
+    let a = sinon.stub(wor, 'getUserNumber').callsFake(function () {
+        return [1, 2, 3, 4];
     });
-    it('user give 4 number,system make 4 random number to compare and return result', () => {
-        
-        workshop2 = new workshop(3,5,7,8);
-        var result =  ['0A0B','0A1B','0A2B','0A3B','0A4B','1A0B','1A1B','1A3B','2A0B','2A1B','2A2B','3A0B'];
-        
-        expect(result).toContain(workshop2.getResult());
+    let b = sinon.stub(wor, 'makeFourRandomNumber').callsFake(function () {
+        return [1, 2, 3, 4];
     });
-});
+    wor.getResult();
+    a.restore();
+    b.restore();
+}
+test();
